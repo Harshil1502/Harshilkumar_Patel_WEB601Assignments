@@ -1,0 +1,19 @@
+<div class="navbar-container" style="background-color:#324d67; padding: 15px; color: white; border-radius:30px">
+  <p class="logo" style="color:'white'">
+    <a href="/" ><h1>{{ title }}</h1></a>
+  </p>
+</div>
+<div>
+  <a href='./'>
+    <div class="product-card" style=" margin: 20px; border-radius: 10%; border-style: solid; width: fit-content; padding: 20px; cursor: pointer; transform: scale(1, 1); transition: transform 0.5s ease; color: #324d67;">
+      <img 
+        src= '{{ individualContentItem.imageLink }}'
+        width="250px"
+        height="250px"
+        class="product-image"
+      />
+      <p class="product-name" style="font-weight: 500; margin-top: 25px;">{{ individualContentItem.title }}</p>
+      <p class="product-price" style="  font-weight: 800; margin-top: 6px; color: black;">${{ individualContentItem.price }}</p>
+    </div>
+  </a>
+</div>

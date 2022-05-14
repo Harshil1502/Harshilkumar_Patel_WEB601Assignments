@@ -3,8 +3,9 @@ import { Content } from "./content";
 export class Lists {
   private _items: Content[];
 
-  constructor() {
+  constructor(item: Content) {
     this._items = [];
+    this._items[0] = item;
   }
   get items(): Content[] {
     return this._items;
@@ -28,6 +29,7 @@ export class Lists {
         <h3>Seller: ${this._items[index].author}</h3>
         <h4>Type: ${this._items[index].type}</h4>
         <p>Description: ${this._items[index].body}</p>
+        <p>${this._items[index].hashtags}</p>
       </div>
     `;
     }
