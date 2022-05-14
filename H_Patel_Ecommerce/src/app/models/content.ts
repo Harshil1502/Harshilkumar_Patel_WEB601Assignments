@@ -6,4 +6,5 @@ export interface Content {
     imageLink?: string;  //optional string
     type: string;
     hashtags?: string[]; //optional array of string
+    price: number;
 }
