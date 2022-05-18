@@ -3,36 +3,36 @@ import { Content } from "./content";
 export class Lists {
   private _items: Content[];
 
-  constructor(item: Content) {
+  constructor() {
     this._items = [];
-    this._items[0] = item;
   }
-  get items(): Content[] {
+  get items():Content[] {
     return this._items;
   }
-  addItem(item: Content) {
+  addItem(item: any) {
     this._items.push(item);
   }
-  contentLength(): number {
+  contentLength() {
     return this._items.length;
   }
-  getContent(index: number): string {
-    if (this.contentLength() <= index) {
-      return '<p>Index is outside the range of the array.</p>';
+  getContent(index: number) {
+    if (index <= this._items.length){
+     return `
+            <img src= ${this._items[index].imageLink} width="250px" height="250px" class="product-image" />
+            <div style="margin:20px">
+              <p class='product-name'>${this._items[index].title}</p>
+              <p class="product-price" style="font-weight: 800; margin-top: 6px; color: black;">$${this._items[index].price} </p>
+              <p>Type: ${this._items[index].type}</p>
+              <p>${this._items[index].author}</p>
+            </div>
+      `;
+
+    } else {
+      return this.error(index);
     }
-    else{
-      return `
-      <div class="card">
-        <img src="${this._items[index].imageLink}" alt="HeadPhones">
-        <h2>${this._items[index].title}</h2>
-        <h3>Price: ${this._items[index].price} </h3>
-        <h3>Seller: ${this._items[index].author}</h3>
-        <h4>Type: ${this._items[index].type}</h4>
-        <p>Description: ${this._items[index].body}</p>
-        <p>${this._items[index].hashtags}</p>
-      </div>
-    `;
+    }
+    error(index: number){
+      return `<div class="error"> The Item is temporary unavailable </div>`
     }
   }
 
-}
