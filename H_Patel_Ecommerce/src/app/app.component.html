@@ -1,0 +1,42 @@
+<div class="navbar-container" style="background-color:#324d67; padding: 15px; color: white; border-radius:30px">
+  <p class="logo" style="color:'white'">
+    <a href="/">
+      <h1>{{ title }}</h1>
+    </a>
+  </p>
+</div>
+<div style="display:flex; margin: 85px;">
+  <div class="product-card"
+    style="border: 1px solid; width: fit-content; border-radius: 20px; padding: 20px; margin: 20px;">
+    <a href='./' [innerHTML]="this.allContent.getContent(0)">
+    </a>
+    <button class="btn">Add to cart</button>
+  </div>
+  <div class="product-card"
+    style="border: 1px solid; width: fit-content; border-radius: 20px; padding: 20px; margin: 20px;">
+    <a href='./' [innerHTML]="this.allContent.getContent(1)">
+    </a>
+    <button class="btn">Add to cart</button>
+  </div>
+  <div class="product-card"
+    style="border: 1px solid; width: fit-content; border-radius: 20px; padding: 20px; margin: 20px;">
+    <a href='./' [innerHTML]="this.allContent.getContent(2)">
+    </a>
+    <button class="btn">Add to cart</button>
+  </div>
+  <div class="product-card"
+    style="border: 1px solid; width: fit-content; border-radius: 20px; padding: 20px; margin: 20px;">
+    <a href='./' [innerHTML]="this.allContent.getContent(3)">
+    </a>
+    <button class="btn">Add to cart</button>
+  </div>
+</div>
+<div style="display:flex; margin: 0px 0px 0px 85px;">
+
+  <div class="product-card"
+    style="border: 1px solid; width: fit-content; border-radius: 20px; padding: 20px; margin: 20px;">
+    <a href='./' [innerHTML]="this.allContent.getContent(8)">
+    </a>
+    <button class="btn">Add to cart</button>
+  </div>
+</div>
