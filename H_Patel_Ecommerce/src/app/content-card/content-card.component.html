@@ -8,18 +8,18 @@
 
 
 	<div class="content">
-		<h1 class="contentTitle"><span>Title </span> <span class="vrline"></span> {{product?.title}}</h1>
-		<h2 class="contentAuthor"><span>Author </span> <span class="vrline"></span> {{product?.author}}</h2>
-		<h3 class="contentType"><span>Type </span> <span class="vrline"></span> {{product?.type}}</h3>
+		<h1 class="contentTitle"><span>Title: </span> <span class="vrline"></span> {{product?.title}}</h1>
+		<h2 class="contentAuthor"><span>Author: </span> <span class="vrline"></span> {{product?.author}}</h2>
+		<h3 class="contentType"><span>Type: </span> <span class="vrline"></span> {{product?.type}}</h3>
 
 
-		<p *ngIf="product?.body; else elseBlockForBody" class="contentBody"><span></span>  &nbsp; {{product?.body}}</p>
+		<p *ngIf="product?.body; else elseBlockForBody" class="contentBody">{{product?.body}}</p>
 
 		<ng-template #elseBlockForBody>
 			<p class="contentBody"><span></span>  &nbsp; Sorry, product is unavailable!</p>
 		</ng-template>
 
 
-		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags; else elseBlockForHashtags"><span></span> {{product?.hashtags?.join(", ")}}</span>
+		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags;"><span></span> {{product?.hashtags?.join(" ")}}</span>
 	</div>
 </div>
