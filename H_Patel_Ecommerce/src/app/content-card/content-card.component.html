@@ -1,25 +1,25 @@
 <div class="contentCard">
 
-	<img (click)="printDataOnConsole()" *ngIf="product?.imageLink; else elseBlockForImage" [src]="product?.imageLink" class="img" alt="{{product.title}}">
+	<img (click)="printDataOnConsole()" *ngIf="product?.imageLink; else elseBlockForImage" [src]="product?.imageLink" class="img">
 	
 	<ng-template #elseBlockForImage>
-		<img src={{product?.imageLink}} class="product-image" alt="Character Picture Not Available">
+		<img src={{product?.imageLink}} class="product-image">
 	</ng-template>
 
 
 	<div class="content">
-		<h1 class="contentTitle"><span class="contentName">Title </span> <span class="vrline"></span> {{product?.title}}</h1>
-		<h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline"></span> {{product?.author}}</h2>
-		<h3 class="contentType"><span class="contentName">Type </span> <span class="vrline"></span> {{product?.type}}</h3>
+		<h1 class="contentTitle"><span>Title </span> <span class="vrline"></span> {{product?.title}}</h1>
+		<h2 class="contentAuthor"><span>Author </span> <span class="vrline"></span> {{product?.author}}</h2>
+		<h3 class="contentType"><span>Type </span> <span class="vrline"></span> {{product?.type}}</h3>
 
 
-		<p *ngIf="product?.body; else elseBlockForBody" class="contentBody"><span class="contentName"></span>  &nbsp; {{product?.body}}</p>
+		<p *ngIf="product?.body; else elseBlockForBody" class="contentBody"><span></span>  &nbsp; {{product?.body}}</p>
 
 		<ng-template #elseBlockForBody>
-			<p class="contentBody"><span class="contentName"></span>  &nbsp; Sorry, product is unavailable!</p>
+			<p class="contentBody"><span></span>  &nbsp; Sorry, product is unavailable!</p>
 		</ng-template>
 
 
-		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags; else elseBlockForHashtags"><span id="hastags"></span> {{product?.hashtags?.join(", ")}}</span>
+		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags; else elseBlockForHashtags"><span></span> {{product?.hashtags?.join(", ")}}</span>
 	</div>
 </div>
