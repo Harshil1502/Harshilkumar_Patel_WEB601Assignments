@@ -1,6 +1,6 @@
 <div class="contentCard">
 
-	<img (click)="printDataOnConsole()" *ngIf="product?.imageLink; else elseBlockForImage" [src]="product?.imageLink" class="contentImg" alt="Character Picture">
+	<img (click)="printDataOnConsole()" *ngIf="product?.imageLink; else elseBlockForImage" [src]="product?.imageLink" class="img" alt="{{product.title}}">
 	
 	<ng-template #elseBlockForImage>
 		<img src={{product?.imageLink}} class="" alt="Character Picture Not Available">
@@ -8,22 +8,18 @@
 
 
 	<div class="content">
-		<h1 class="contentTitle"><span class="contentName">Title </span> <span class="vrline">&#9213;</span> {{product?.title}}</h1>
-		<h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline">&#9213;</span> {{product?.author}}</h2>
-		<h3 class="contentType"><span class="contentName">Type </span> <span class="vrline">&#9213;</span> {{product?.type}}</h3>
+		<h1 class="contentTitle"><span class="contentName">Title </span> <span class="vrline"></span> {{product?.title}}</h1>
+		<h2 class="contentAuthor"><span class="contentName">Author </span> <span class="vrline"></span> {{product?.author}}</h2>
+		<h3 class="contentType"><span class="contentName">Type </span> <span class="vrline"></span> {{product?.type}}</h3>
 
 
-		<p *ngIf="product?.body; else elseBlockForBody" class="contentBody"><span class="contentName">&#x2731;</span>  &nbsp; {{product?.body}}</p>
+		<p *ngIf="product?.body; else elseBlockForBody" class="contentBody"><span class="contentName"></span>  &nbsp; {{product?.body}}</p>
 
 		<ng-template #elseBlockForBody>
-			<p class="contentBody"><span class="contentName">&#x2731;</span>  &nbsp; Sorry, no content available for this Character!</p>
+			<p class="contentBody"><span class="contentName"></span>  &nbsp; Sorry, product is unavailable!</p>
 		</ng-template>
 
 
-		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags; else elseBlockForHashtags"><span id="hastags">&#10522;</span> {{product?.hashtags?.join(", ")}}</span>
-		
-		<ng-template #elseBlockForHashtags>
-			<span><span id="hastags">&#10522;</span>Sorry, Hashtags are not available for this Character!</span>
-		</ng-template>
+		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags; else elseBlockForHashtags"><span id="hastags"></span> {{product?.hashtags?.join(", ")}}</span>
 	</div>
 </div>
