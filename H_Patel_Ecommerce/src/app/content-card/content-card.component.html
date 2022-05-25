@@ -3,7 +3,7 @@
 	<img (click)="printDataOnConsole()" *ngIf="product?.imageLink; else elseBlockForImage" [src]="product?.imageLink" class="img" alt="{{product.title}}">
 	
 	<ng-template #elseBlockForImage>
-		<img src={{product?.imageLink}} class="" alt="Character Picture Not Available">
+		<img src={{product?.imageLink}} class="product-image" alt="Character Picture Not Available">
 	</ng-template>
 
 
