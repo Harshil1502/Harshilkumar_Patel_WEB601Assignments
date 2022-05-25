@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import {Content} from '../models/content'
 @Component({
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentCardComponent implements OnInit {
 
+  @Input() product?: Content;
+
+  printDataOnConsole()
+  {
+    console.log(`Content's id is "${this.product?.id}" and Author is "${this.product?.author}"`);
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
