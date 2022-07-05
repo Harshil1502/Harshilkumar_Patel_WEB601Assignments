@@ -6,6 +6,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { filterProductTypePipe } from './pipes/filter-product-type.pipe';
 import { HighlightImportantDataDirective } from './directives/highlight-important-data.directive';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HighlightImportantDataDirective } from './directives/highlight-importan
     ContentListComponent,
     ContentCardComponent,
     filterProductTypePipe,
-    HighlightImportantDataDirective
+    HighlightImportantDataDirective,
+    ContentDetailComponent
   ],
   imports: [
     BrowserModule
