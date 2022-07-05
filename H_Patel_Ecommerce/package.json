@@ -12,7 +12,8 @@
     "generatecomponent": "ng g component",
     "generatepipe": "ng g pipe",
     "generatedirective": "ng g d",
-    "generateservice": "ng generate service"
+    "generateservice": "ng generate service",
+    "generateroute" : "ng generate module app-routing --flat"
   },
   "private": true,
   "dependencies": {
