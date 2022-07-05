@@ -1,0 +1,29 @@
+<div *ngIf="product">
+  <header class="title" appHighlightImportantData highlightType="title" colour="cadetblue">{{ product.title }}
+  </header>
+  <img *ngIf="product.imageLink; else defaultProductImage" [src]="product.imageLink"
+    (click)="displayAuthorAndId()">
+  <p *ngIf="product.body">
+    {{ product.body }}
+  </p>
+  <div *ngIf="isLast; else notLastElement" class="author" appHighlightImportantData highlightType="author"
+    colour="dodgerblue">{{ product.author }}
+  </div>
+  <div appHighlightImportantData [highlightType]="'type'" class="type">{{ product.type }}</div>
+  <div class="hashtags" *ngIf="product.hashtags">
+    <span appHighlightImportantData highlightType="tag" *ngFor="let hashtag of product.hashtags">
+      #{{ hashtag }}
+    </span>
+    <!-- <span>{{ product.hashtags.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->
+  </div>
+</div>
+
+<ng-template #defaultProductImage>
+  <img alt="Default Product Image"
+    src="https://www.bing.com/images/search?view=detailV2&ccid=KOfbEfdX&id=3E14CE2B6F9165F6675A7A01BA195BB96EFCE232&thid=OIP.KOfbEfdXPxqWfc8apIZBKgHaEy&mediaurl=https%3a%2f%2fm3f9w5j3.stackpathcdn.com%2fwp-content%2fuploads%2f404-1536x994.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.28e7db11f7573f1a967dcf1aa486412a%3frik%3dMuL8brlbGboBeg%26pid%3dImgRaw%26r%3d0&exph=994&expw=1536&q=404+product+not+found&simid=608017024177431846&FORM=IRPRST&ck=34C4797952EF90C7408D41202092B5BB&selectedIndex=3">
+</ng-template>
+<ng-template #notLastElement>
+  <div class="author">
+    {{ product?.author }}
+  </div>
+</ng-template>

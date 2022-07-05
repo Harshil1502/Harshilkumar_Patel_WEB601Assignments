@@ -1,0 +1,39 @@
+<div><label>
+    Author name search:
+    <input autofocus #authorToSearchFor>
+  </label>
+  <button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Author</button>
+</div>
+<div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
+  {{ authorSearchMessage.message }}
+</div>
+
+<app-content-card
+  *ngFor="let individualProduct of (productList | filterProductType); even as isEven; last as isLast"
+  [product]="individualProduct" [class.is-even]="isEven" [class.is-odd]="!isEven" class="no-type" [isLast]="isLast"
+  [class]="individualProduct.author.toLowerCase() === authorToSearchFor.value.toLowerCase() ? 'product-found' : ''">
+</app-content-card>
+
+<app-content-card
+  *ngFor="let individualProduct of (productList | filterProductType: 'Watch'); even as isEven; last as isLast"
+  [product]="individualProduct" [class.is-even]="isEven" [class.is-odd]="!isEven" class="im-type" [isLast]="isLast"
+  [class.product-found]="individualProduct.author.toLowerCase() === authorToSearchFor.value.toLowerCase()">
+</app-content-card>
+
+<app-content-card
+  *ngFor="let individualProduct of (productList | filterProductType: 'Speaker'); even as isEven; last as isLast"
+  [product]="individualProduct" [class.is-even]="isEven" [class.is-odd]="!isEven" class="fm-type" [isLast]="isLast"
+  [class.product-found]="individualProduct.author.toLowerCase() === authorToSearchFor.value.toLowerCase()">
+</app-content-card>
+
+<app-content-card
+  *ngFor="let individualProduct of (productList | filterProductType: 'Headphone'); even as isEven; last as isLast"
+  [product]="individualProduct" [class.is-even]="isEven" [class.is-odd]="!isEven" class="gm-type" [isLast]="isLast"
+  [class.product-found]="individualProduct.author.toLowerCase() === authorToSearchFor.value.toLowerCase()">
+</app-content-card>
+
+<app-content-card
+  *ngFor="let individualProduct of (productList | filterProductType: 'Neck Band'); even as isEven; last as isLast"
+  [product]="individualProduct" [class.is-even]="isEven" [class.is-odd]="!isEven" class="gm-type" [isLast]="isLast"
+  [class.product-found]="individualProduct.author.toLowerCase() === authorToSearchFor.value.toLowerCase()">
+</app-content-card>

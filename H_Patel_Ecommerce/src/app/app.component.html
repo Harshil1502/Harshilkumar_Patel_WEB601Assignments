@@ -1,0 +1,11 @@
+<div class="product-search">
+  <label>
+    Product Search:
+    <input type="number" autofocus #idNumber>
+  </label>
+  <br>
+  <button (click)="checkForIdInList(idNumber.value)">Check for product at id</button>
+</div>
+<app-content-card [product]="individualProduct" class="single-item-on-app-component"></app-content-card>
+
+<app-content-list></app-content-list>
