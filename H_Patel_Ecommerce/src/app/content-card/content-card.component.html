@@ -1,5 +1,5 @@
 <div *ngIf="product">
-  <header class="title" appHighlightImportantData highlightType="title" colour="cadetblue"><a [routerLink]="['/detail', product?.id]" routerLinkActive="active">{{product?.title}} </a>
+  <header class="title" appHighlightImportantData highlightType="title"><a [routerLink]="['/detail', product?.id]" routerLinkActive="active">{{product?.title}} </a>
   </header>
   <img *ngIf="product.imageLink; else defaultProductImage" [src]="product.imageLink"
     (click)="displayAuthorAndId()">

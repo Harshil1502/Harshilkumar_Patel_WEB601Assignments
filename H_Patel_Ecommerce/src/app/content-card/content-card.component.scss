@@ -1,5 +1,5 @@
 :host {
-  border: 2px dashed crimson;
+  border: 2px #00e6f6;
   display: block;
   padding: 16px;
   margin: 10px auto 16px;
@@ -30,8 +30,7 @@
     color: white;
   }
 
-  &.gm-type {
-    background-color: dodgerblue;
+  &.speaker-type {
     color: #eeeeee;
   }
 
@@ -40,12 +39,14 @@
   }
 
   &.single-item-on-app-component {
-    box-shadow: 8px 16px 24px red;
+    box-shadow: 8px 16px 24px #00e6f6;
   }
 }
 
 
 header {
+  text-decoration: none;
+  color: white;
   font-size: 30px;
   margin-bottom: 8px;
 }
@@ -57,6 +58,8 @@ img {
 
 p {
   font-weight: bold;
+  color: white;
+  font-size: larger;
 }
 
 .author {
@@ -78,6 +81,7 @@ p {
   justify-content: space-evenly;
   background-color: aquamarine;
   border-radius: 10px;
+  color: white;
 
   span {
     font-family: Arial, Helvetica, sans-serif;

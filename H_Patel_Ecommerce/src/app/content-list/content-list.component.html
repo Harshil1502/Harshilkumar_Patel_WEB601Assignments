@@ -1,8 +1,6 @@
-<div><label>
-    Author name search:
-    <input autofocus #authorToSearchFor>
-  </label>
-  <button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Author</button>
+<div>
+    <input autofocus #authorToSearchFor placeholder="Brand Name Search"><br />
+    <button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Brand</button>
 </div>
 <div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
   {{ authorSearchMessage.message }}

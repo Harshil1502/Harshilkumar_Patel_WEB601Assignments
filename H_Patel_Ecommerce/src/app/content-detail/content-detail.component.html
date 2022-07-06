@@ -1,14 +1,23 @@
-<a routerLink="/list">Product list</a>
-
 <ng-container *ngIf="contentItem">
   <h2>
     {{ contentItem.author }}
   </h2>
-  <img *ngIf="contentItem" [src]="contentItem.imageLink">
-  <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
-    {{contentItem.body}}
-  </p>
-  <ng-template #elseBlockNameIsWhateverYouWant>
-    <p class="not-found">No body content found</p>
-  </ng-template>
 </ng-container>
+
+<div class="button">
+  <a routerLink="/detail/{{this.previousButton}}"> &laquo;  &nbsp;  Previous</a>
+  <a routerLink="/list">Product list</a>
+</div>
+<div class="body">
+  <ng-container *ngIf="contentItem">
+    <img *ngIf="contentItem" [src]="contentItem.imageLink">
+    <div class="text">
+      <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
+        {{contentItem.body}}
+      </p>
+      <ng-template #elseBlockNameIsWhateverYouWant>
+        <p class="not-found">No body content found</p>
+      </ng-template>
+    </div>
+  </ng-container>
+</div>
