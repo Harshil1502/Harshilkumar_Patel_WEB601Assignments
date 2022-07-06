@@ -1,20 +1,13 @@
 <div *ngIf="product">
-  <header class="title" appHighlightImportantData highlightType="title" colour="cadetblue"><a></a>{{ product.title }}
+  <header class="title" appHighlightImportantData highlightType="title" colour="cadetblue"><a [routerLink]="['/detail', product?.id]" routerLinkActive="active">{{product?.title}} </a>
   </header>
   <img *ngIf="product.imageLink; else defaultProductImage" [src]="product.imageLink"
     (click)="displayAuthorAndId()">
-  <p *ngIf="product.body">
-    {{ product.body }}
-  </p>
-  <div *ngIf="isLast; else notLastElement" class="author" appHighlightImportantData highlightType="author"
-    colour="dodgerblue">{{ product.author }}
-  </div>
   <div appHighlightImportantData [highlightType]="'type'" class="type">{{ product.type }}</div>
   <div class="hashtags" *ngIf="product.hashtags">
     <span appHighlightImportantData highlightType="tag" *ngFor="let hashtag of product.hashtags">
       #{{ hashtag }}
     </span>
-    <!-- <span>{{ product.hashtags.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->
   </div>
 </div>
 
