@@ -9,6 +9,8 @@ import { HighlightImportantDataDirective } from './directives/highlight-importan
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchProductComponent } from './search-product/search-product.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SearchProductComponent } from './search-product/search-product.componen
     filterProductTypePipe,
     HighlightImportantDataDirective,
     ContentDetailComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    NavbarComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

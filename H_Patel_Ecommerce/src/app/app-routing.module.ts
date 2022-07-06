@@ -4,6 +4,7 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
 import { ContentListComponent } from './content-list/content-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchProductComponent } from './search-product/search-product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "search",
     component: SearchProductComponent
+  },
+  {
+    path: "**",
+    component: PageNotFoundComponent
   },
 ];
 
