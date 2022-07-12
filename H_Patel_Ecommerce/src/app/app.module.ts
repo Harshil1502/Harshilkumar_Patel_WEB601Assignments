@@ -33,7 +33,11 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularInMemoryWebApiService,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      AngularInMemoryWebApiService, {
+      delay: 1000,
+    }),
    
   ],
   providers: [],
