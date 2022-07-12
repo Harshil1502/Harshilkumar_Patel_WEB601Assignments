@@ -56,7 +56,7 @@ export const PRODUCTS: Content[] = [
     body: 'With Surrounding sound ',
     title: 'Rockers pod',
     price: 100,
-    author: 'boat rockers'
+    author: 'boat'
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ export const PRODUCTS: Content[] = [
     body: 'best fitness gadget right now',
     title: 'Apple',
     price: 500,
-    author: 'Apple California'
+    author: 'Apple'
   },
   {
     id: 6,
@@ -74,7 +74,7 @@ export const PRODUCTS: Content[] = [
     body: ' fitness gadget',
     title: 'Apple',
     price: 450,
-    author: 'Apple California'
+    author: 'Apple'
   }
 
 ];

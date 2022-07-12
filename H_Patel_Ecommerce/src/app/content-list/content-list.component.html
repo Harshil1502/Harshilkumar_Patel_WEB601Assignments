@@ -1,11 +1,13 @@
 <div>
     <input autofocus #authorToSearchFor placeholder="Brand Name Search"><br />
-    <button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Brand</button>
+    <button (click)="checkForAuthorInList(authorToSearchFor.value)">Search</button>
 </div>
 <div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
   {{ authorSearchMessage.message }}
 </div>
-
+<div>
+  
+</div>
 <app-content-card
   *ngFor="let individualProduct of (productList | filterProductType); even as isEven; last as isLast"
   [product]="individualProduct" [class.is-even]="isEven" [class.is-odd]="!isEven" class="no-type" [isLast]="isLast"
