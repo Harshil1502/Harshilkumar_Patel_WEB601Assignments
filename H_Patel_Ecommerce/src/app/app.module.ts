@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContentLinkComponent } from './content-link/content-link.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContentDetailComponent,
     SearchProductComponent,
     NavbarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContentLinkComponent
   ],
   imports: [
     BrowserModule,
