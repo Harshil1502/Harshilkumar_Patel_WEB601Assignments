@@ -15,6 +15,7 @@ import { ContentLinkComponent } from './content-link/content-link.component';
 import { AngularInMemoryWebApiService } from './services/angular-in-memory-web-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     NavbarComponent,
     PageNotFoundComponent,
     ContentLinkComponent,
+    ChangeContentComponent,
     
   ],
   imports: [
