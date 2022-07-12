@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Content } from '../models/content';
-import { PRODUCTService } from '../services/chess-champion.service';
+import { PRODUCTService } from '../services/product.service';
 
 @Component({
   selector: 'app-content-detail',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { PRODUCTS, DEFAULTPRODUCTCONTENT } from '../data/mock-chess-champions';
+import { PRODUCTS, DEFAULTPRODUCTCONTENT } from '../data/mock-products';
 import { Content } from '../models/content';
 
 @Injectable({
@@ -42,20 +42,20 @@ export class PRODUCTService {
     // update the values of that item in the array with the values of the newContentItem
     // return the array after updating
 
-    PRODUCTS.forEach((individualChessChampion, index) => {
+    PRODUCTS.forEach((individualProduct, index) => {
       // one potential solution
-      // if (individualChessChampion.id === newContentItem.id) // found them
+      // if (individualProduct.id === newContentItem.id) // found them
       // {
-      //   individualChessChampion.title = newContentItem.title;
-      //   individualChessChampion.body = newContentItem.body;
-      //   individualChessChampion.author = newContentItem.author;
-      //   individualChessChampion.imageLink = newContentItem.imageLink;
-      //   individualChessChampion.type = newContentItem.type;
-      //   individualChessChampion.hashtags = newContentItem.hashtags;
+      //   individualProduct.title = newContentItem.title;
+      //   individualProduct.body = newContentItem.body;
+      //   individualProduct.author = newContentItem.author;
+      //   individualProduct.imageLink = newContentItem.imageLink;
+      //   individualProduct.type = newContentItem.type;
+      //   individualProduct.hashtags = newContentItem.hashtags;
       //   // return;
       // }
 
-      if (individualChessChampion.id === newContentItem.id) // found them
+      if (individualProduct.id === newContentItem.id) // found them
       {
         console.log("Trying method 2");
         PRODUCTS[index] = newContentItem;

@@ -12,6 +12,9 @@ import { SearchProductComponent } from './search-product/search-product.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContentLinkComponent } from './content-link/content-link.component';
+import { AngularInMemoryWebApiService } from './services/angular-in-memory-web-api.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { ContentLinkComponent } from './content-link/content-link.component';
     SearchProductComponent,
     NavbarComponent,
     PageNotFoundComponent,
-    ContentLinkComponent
+    ContentLinkComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularInMemoryWebApiService,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

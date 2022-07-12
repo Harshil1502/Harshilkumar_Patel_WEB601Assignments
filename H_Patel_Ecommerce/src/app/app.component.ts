@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { DEFAULTPRODUCTCONTENT } from './data/mock-chess-champions';
+import { DEFAULTPRODUCTCONTENT } from './data/mock-products';
 import { Content } from './models/content';
-import { PRODUCTService } from './services/chess-champion.service';
+import { PRODUCTService } from './services/product.service';
 
 @Component({
   selector: 'app-root',
