@@ -16,6 +16,7 @@ import { AngularInMemoryWebApiService } from './services/angular-in-memory-web-a
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ChangeContentComponent } from './change-content/change-content.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ChangeContentComponent } from './change-content/change-content.componen
     
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

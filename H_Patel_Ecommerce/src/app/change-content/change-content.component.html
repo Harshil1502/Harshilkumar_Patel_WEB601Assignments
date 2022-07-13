@@ -1,1 +1,32 @@
-<p>change-content works!</p>
+<h2>
+    You are Adding new Product
+</h2>
+<div>
+    <label>
+        Name:
+        <input [(ngModel)]="product.title">
+      </label><br /><br />
+      <label>
+        Brand Name:
+        <input [(ngModel)]="product.author">
+      </label><br /><br />
+      <label>
+        Type:
+        <input [(ngModel)]="product.type">
+      </label><br /><br />
+      <label>
+        Image URL:
+        <input [(ngModel)]="product.imageLink">
+      </label><br /><br />
+      <label>
+        Body:
+        <input [(ngModel)]="product.body">
+      </label><br /><br />
+      <label>
+        Tags:
+        <input [(ngModel)]="temphashtags">
+      </label><br /><br />
+      <button (click)="addContentToServer()">
+        Add Product
+      </button>
+</div>

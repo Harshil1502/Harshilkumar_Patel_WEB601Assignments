@@ -27,7 +27,7 @@ const routes: Routes = [
     component: SearchProductComponent
   },
   {
-    path: "addContent",
+    path: "list/addContent",
     component: ChangeContentComponent
   },
   {

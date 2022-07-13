@@ -9,14 +9,7 @@ import { PRODUCTService } from '../services/product.service';
 })
 export class ContentListComponent implements OnInit {
   productList: Content[];
-  hikaru: Content = {
-    id: 3,
-    title: 'Hikaru Nakamura',
-    body: "A chess champion who became a successful youtuber instead",
-    author: "Alex Millerman",
-    type: "GM",
-    hashtags: ["supergm", "indepthanalysis"]
-  }
+  
   types: string[] = ["", "Neck Band", "Headphone", "Speaker", "Watch"];
   authorSearchMessage = {
     message: "",

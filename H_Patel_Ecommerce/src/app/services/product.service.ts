@@ -7,7 +7,6 @@ import { Content } from '../models/content';
   providedIn: 'root'
 })
 export class PRODUCTService {
-
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type':
@@ -18,28 +17,29 @@ export class PRODUCTService {
   constructor(private http: HttpClient) { }
 
   getContent(): Observable<Content[]> {
-    return this.http.get<Content[]>("/api/addProduct");
+    return this.http.get<Content[]>("/api/product");
   }
 
   // C
-  addProductItem(newContent: Content): Observable<Content> {
-    return this.http.post<Content>("/api/addProduct", newContent, this.httpOptions)
+  addProduct(getInputedContentbyUser:Content): Observable<Content>{
+    console.log("Added Works: ");
+    return this.http.post<Content>("/api/product", getInputedContentbyUser, this.httpOptions)
   }
 
   // R
   getContentItem(id: number): Observable<Content> {
     console.log("Now getting it from the server!");
-    return this.http.get<Content>("/api/addProduct/" + id);
+    return this.http.get<Content>("/api/product/" + id);
   }
 
   // U
   // content item needs to have the id set correctly
-  updateContent(contentItem: Content): Observable<any> {
-    return this.http.put<any>("api/addProduct", contentItem, this.httpOptions);
+  updateContent(product: Content): Observable<any> {
+    return this.http.put<any>("api/product", product, this.httpOptions);
   }
 
   // D
-  deleteContentItem(newContent: Content): Observable<undefined> {
+  deleteContentItem(newProduct: Content): Observable<undefined> {
     // display that it's processing
     // delete the item
     return of(); // send back observable so the component can subscribe to it and know it worked
