@@ -11,7 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ContentLinkComponent } from './content-link/content-link.component';
 import { AngularInMemoryWebApiService } from './services/angular-in-memory-web-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -29,7 +28,6 @@ import { FormsModule } from '@angular/forms';
     SearchProductComponent,
     NavbarComponent,
     PageNotFoundComponent,
-    ContentLinkComponent,
     ChangeContentComponent,
     
   ],

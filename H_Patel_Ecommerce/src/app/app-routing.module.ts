@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { RouterModule, Routes } from '@angular/router';
