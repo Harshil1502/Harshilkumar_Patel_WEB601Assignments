@@ -34,12 +34,12 @@ export class PRODUCTService {
 
   // U
   // content item needs to have the id set correctly
-  updateContent(product: Content): Observable<any> {
+  updateProduct(product: Content): Observable<any> {
     return this.http.put<any>("api/product", product, this.httpOptions);
   }
 
   // D
-  deleteContentItem(newProduct: Content): Observable<undefined> {
+  deleteProduct(newProduct: Content): Observable<undefined> {
     // display that it's processing
     // delete the item
     return of(); // send back observable so the component can subscribe to it and know it worked

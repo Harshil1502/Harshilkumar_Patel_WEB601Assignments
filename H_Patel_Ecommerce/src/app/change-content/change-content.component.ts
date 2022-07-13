@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Content } from '../models/content';
 import { PRODUCTService } from '../services/product.service';
 
@@ -8,16 +9,38 @@ import { PRODUCTService } from '../services/product.service';
   styleUrls: ['./change-content.component.scss']
 })
 export class ChangeContentComponent implements OnInit {
+  id? : number;
 
-    product: Content = {
-    title: "",
-    author:"",
-    body: ""
+  
+  routeURL = this.router.url;
+
+  verify_and_refirect_Route: boolean | undefined;
+
+  product: Content = {
+    title: '',
+    body: '',
+    author: '',
+    type: ''
   };
   temphashtags: string = '';
-  constructor(private PRODUCTService: PRODUCTService) { }
+  constructor(private router: Router,
+    private route: ActivatedRoute, private PRODUCTService: PRODUCTService) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.id = +(params.get('id') ?? 0);
+      this.product.id = this.id;
+    });
+    if(this.routeURL === '/addContent')
+    {
+      console.log("Add Content works Here....")
+      this.verify_and_refirect_Route = true;
+    }
+    else
+    {
+        console.log("Update Content works Here....")
+        this.verify_and_refirect_Route = false;
+      }
   }
 
   formClear(){
@@ -30,20 +53,19 @@ export class ChangeContentComponent implements OnInit {
   addContentToServer(): void {
     this.product.hashtags = this.temphashtags.split(", ");
     this.PRODUCTService.addProduct(this.product)
-      .subscribe((newContentFromServer: Content) =>
-        console.log("Success! New content added", newContentFromServer),
+    .subscribe(newContentFromServer =>
+      console.log("Success! New content added", this.product)
       );
       this.formClear();
   }
-  // updateContentOnServer(): void {
-  //   this.product.hashtags = this.temphashtags.split(", ");
-  //   this.PRODUCTService.updateContent(this.product)
-  //     .subscribe(() =>
-  //       console.log("Content updated successfully", this.product)
-  //     );
-  //}
-
-  
-
-
+  updateContentOnServer() {
+    this.product.hashtags = this.temphashtags.split(", ");
+    this.PRODUCTService.updateProduct(this.product).subscribe(() =>
+    console.log("Content updated successfully from Update", this.product)
+  );
+      this.formClear();
+  }
+}
+function savedata(savedata: any) {
+  throw new Error('Function not implemented.');
 }

@@ -11,12 +11,7 @@ export class ContentCardComponent implements OnInit {
   @Input() isLast?: boolean;
 
   constructor() {
-    // this.content = {
-    //   id: 0,
-    //   title: '',
-    //   author: '',
-    //   type: ''
-    // };
+
   }
 
   ngOnInit(): void {

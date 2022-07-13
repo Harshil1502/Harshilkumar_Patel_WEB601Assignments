@@ -11,7 +11,6 @@ export class AngularInMemoryWebApiService implements InMemoryDbService{
   constructor() { }
   
   createDb() {
-    // setting it to the value of our array of content
     const product: Content[] = PRODUCTS;
     return {
       product: product
