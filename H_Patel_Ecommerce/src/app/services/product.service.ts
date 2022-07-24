@@ -13,6 +13,7 @@ export class PRODUCTService {
         'application/json'
     })
   };
+  Observable: any;
 
   constructor(private http: HttpClient) { }
 

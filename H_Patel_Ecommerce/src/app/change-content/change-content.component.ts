@@ -28,7 +28,7 @@ export class ChangeContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.id = +(params.get('id') ?? );
+      this.id = +(params.get('id') ?? -1);
       this.product.id = this.id;
     });
     if(this.routeURL === '/addContent')

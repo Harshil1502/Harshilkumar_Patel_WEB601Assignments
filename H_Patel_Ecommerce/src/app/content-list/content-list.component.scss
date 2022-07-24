@@ -10,37 +10,37 @@
 div{
     display: flex;
     justify-content: center;
-    input{
-            margin-left:30px;
-            width: 400px;
-            height: 40px;
-            border-radius: 20px;
-            border: 3px solid #00e6f6;
-            background-color: #082A3A;
-            color: white;
+
+    
+    }
+
+    .search{
+        color: white;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        input{
+
             &::placeholder{
-                text-align: center;
                 color: white;
             }
-            &:focus{
-                background-color: white;
-                color: #082A3A;
-                font-size: larger;
-                content: icon;
-            }
-    }
-    
-    button{
-        width: 200px;
-        margin-left: 25px;
-        border-radius: 20px;
-        border: 3px solid #00e6f6;
-        background-color: #082A3A;
-        color: white;
-        font-weight: 600;
-        &:hover{
-           
-           background-color: #1f6cab;
         }
     }
-}
+
+    button{
+       color: white;
+       display: block;
+       width: 50%;
+       margin: 0 auto;
+   //     width: 200px;
+   //     margin-left: 25px;
+   //     border-radius: 20px;
+   //     border: 3px solid #00e6f6;
+   //     background-color: #082A3A;
+   //     color: white;
+   //     font-weight: 600;
+   //     &:hover{
+          
+   //        background-color: #1f6cab;
+   //     }
+   }

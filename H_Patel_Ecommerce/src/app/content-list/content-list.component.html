@@ -1,7 +1,10 @@
 <div>
-    <input autofocus #authorToSearchFor placeholder="Brand Name Search"><br />
-    <button (click)="checkForAuthorInList(authorToSearchFor.value)">Search</button>
+  <mat-form-field class="search" color="accent" appearance="fill">
+    <input matInput autofocus #authorToSearchFor placeholder="Brand Name Search" ><br />
+  </mat-form-field>
 </div>
+<button mat-raised-button color="accent" (click)="checkForAuthorInList(authorToSearchFor.value)">Search</button>
+
 <div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
   {{ authorSearchMessage.message }}
 </div>

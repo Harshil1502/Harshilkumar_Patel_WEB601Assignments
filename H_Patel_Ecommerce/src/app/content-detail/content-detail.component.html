@@ -5,8 +5,10 @@
 </ng-container>
 
 <div class="button">
-  <a routerLink="/detail/{{this.previousButton}}"> &laquo;  &nbsp;  Previous</a>
-  <a routerLink="/list">Product list</a>
+  <a routerLink="/detail/{{this.previousButton}}"  mat-raised-button color="accent"> &laquo;  &nbsp;  Previous</a>
+  <a routerLink="/list"  mat-raised-button color="accent">Product list</a>
+  <a id="back-to-list" mat-raised-button color="accent" routerLink="/updateContent/{{this.id}}">Update Product</a>
+
 </div>
 <div class="body">
   <ng-container *ngIf="contentItem">
