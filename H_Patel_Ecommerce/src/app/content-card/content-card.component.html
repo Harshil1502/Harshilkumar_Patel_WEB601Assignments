@@ -1,4 +1,6 @@
-<mat-card *ngIf="product">
+<span matBadge="{{product?.id}} " matBadgeOverlap="true" *ngIf="product">
+<mat-card >
+
   <mat-card-header>
   <mat-card-title>
     <header class="title" appHighlightImportantData highlightType="title"><a [routerLink]="['/detail', product?.id]"
@@ -24,8 +26,8 @@
 </mat-card-content>
   <img mat-card-image *ngIf="product.imageLink; else defaultProductImage" [src]="product.imageLink"
     (click)="displayAuthorAndId()">
-   
-</mat-card>
+  </mat-card>
+</span>
 
 <ng-template #defaultProductImage>
   <img alt="Default Product Image"
