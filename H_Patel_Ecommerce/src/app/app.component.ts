@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DEFAULTPRODUCTCONTENT } from './data/mock-products';
 import { Content } from './models/content';
 import { PRODUCTService } from './services/product.service';
+import { LogUpdateService } from './log-update.service';
 
 @Component({
   selector: 'app-root',
@@ -12,24 +13,13 @@ export class AppComponent {
   title = 'H_Patel_ECommerce';
   individualProduct: Content = DEFAULTPRODUCTCONTENT;
 
-  constructor(private PRODUCTService: PRODUCTService) {
-
+  constructor(private logService: LogUpdateService) {
   }
 
   ngOnInit(): void {
     // getContentItem test
-    this.PRODUCTService.getContentItem(1).subscribe(productSingleItem => {
-      console.log("App component - Got the content item: ", productSingleItem);
-      this.individualProduct = productSingleItem;
-    });
+    this.logService.init();
 
-  }
-
-  checkForIdInList(idValue: string): void {
-    this.PRODUCTService.getContentItem(Number(idValue)).subscribe(productSingleItem => {
-      console.log("App component - Got the content item AGAIN: ", productSingleItem);
-      this.individualProduct = productSingleItem;
-    });
   }
 
 }
