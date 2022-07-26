@@ -4,6 +4,15 @@
 		[class.even]="even" [class.odd]="odd" [product]="item"></app-content-card>
 </div> -->
 
+<div><label>
+    Product Author search:
+    <input autofocus #productAuthor>
+  </label>
+  <button (click)="checkForAuthorInList(productAuthor.value)">Check for Product Author</button>
+</div>
+{{ message.message }}
+
+
 <h2>Headphone</h2>
 <div>
 	<app-content-card  *ngFor="let item of product | productFilter:'Headphone';" class="HeadphoneCard" [product]="item"></app-content-card>
