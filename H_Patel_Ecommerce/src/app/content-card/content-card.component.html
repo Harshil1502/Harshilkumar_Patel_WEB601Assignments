@@ -1,6 +1,6 @@
 <div class="contentCard">
 
-	<img (click)="printDataOnConsole()" *ngIf="product?.imageLink; else elseBlockForImage" [src]="product?.imageLink" class="img">
+	<img (click)="printDataOnConsole()" *ngIf="product?.imageLink; else defaultProductImage" [src]="product?.imageLink" class="img">
 	
 	<ng-template #elseBlockForImage>
 		<img src={{product?.imageLink}} class="product-image">
@@ -23,3 +23,7 @@
 		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags;"><span></span> {{product?.hashtags?.join(" ")}}</span>
 	</div>
 </div>
+
+<ng-template #defaultProductImage>
+	<img src="https://th.bing.com/th/id/OIP.VD31DFrFb5khaOriN4FH3gHaFS?pid=ImgDet&rs=1" width="300px">
+</ng-template>

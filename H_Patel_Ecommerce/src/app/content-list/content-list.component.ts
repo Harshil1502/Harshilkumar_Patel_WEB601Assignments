@@ -53,7 +53,6 @@ export class ContentListComponent implements OnInit {
     {
       id: 4,
       type: 'Speaker',
-      imageLink: 'https://th.bing.com/th/id/OIP.2iatXsqac9hciW7ffvzIuAHaHa?w=181&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7',
       body: 'With Surrounding sound ',
       title: 'Rockers pod',
       price: 100,
