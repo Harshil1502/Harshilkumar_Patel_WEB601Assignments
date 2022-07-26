@@ -21,7 +21,9 @@ export class ContentListComponent implements OnInit {
       body: 'Very good platformer on the Nintendo Switch',
       title: 'Boat Rockers',
       price: 20,
-      author: 'boat'
+      author: 'boat',
+      hashtags: ['Neck Band']
+
     },
     {
       id: 1,
@@ -30,7 +32,9 @@ export class ContentListComponent implements OnInit {
       body: 'Sound is so realistic',
       title: 'Gaming Headset',
       price: 90,
-      author: 'Pacrate'
+      author: 'Pacrate',
+      hashtags: ['Headphone']
+
     },
     {
       id: 2,
@@ -39,7 +43,9 @@ export class ContentListComponent implements OnInit {
       body: 'The best Noice cancelation ever happened',
       title: 'Headphones',
       price: 100,
-      author: 'Soney'
+      author: 'Soney',
+      hashtags: ['Headphones']
+
     }, 
     {
       id: 3,
@@ -48,7 +54,9 @@ export class ContentListComponent implements OnInit {
       body: 'Man This is a real beauty with the beast sound',
       title: 'PS4 Headset',
       price: 170,
-      author: 'Letton'
+      author: 'Letton',
+      hashtags: ['Beast']
+
     }, 
     {
       id: 4,
@@ -56,7 +64,8 @@ export class ContentListComponent implements OnInit {
       body: 'With Surrounding sound ',
       title: 'Rockers pod',
       price: 100,
-      author: 'boat'
+      author: 'boat',
+      hashtags: ['Speaker']
     },
     {
       id: 5,
@@ -65,7 +74,9 @@ export class ContentListComponent implements OnInit {
       body: 'best fitness gadget right now',
       title: 'Apple',
       price: 500,
-      author: 'Apple'
+      author: 'Apple',
+      hashtags: ['AppleWatch']
+
     },
     {
       id: 6,
@@ -74,7 +85,9 @@ export class ContentListComponent implements OnInit {
       body: ' fitness gadget',
       title: 'Apple',
       price: 450,
-      author: 'Apple'
+      author: 'Apple',
+      hashtags: ['FitBit']
+
     }];
 
 
