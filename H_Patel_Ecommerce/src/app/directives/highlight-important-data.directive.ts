@@ -9,7 +9,7 @@ export class HighlightImportantDataDirective {
   private initColor: string;
 
   @Input() colour: string = '';
-  @Input() highlightElms?: "type" | "title" | "hashtags" | "author";
+  @Input() highlightElms?: "type" | "title" | "tags" | "author";
   @HostBinding('style.backgroundColor') get textColour() {
     return this.highlight ? this.colour : 'transparent';
   }
@@ -23,7 +23,7 @@ export class HighlightImportantDataDirective {
       this.element.nativeElement.style.border = "4px solid white";
     }
 
-    if (this.highlightElms === "hashtags" || this.highlightElms === "author") {
+    if (this.highlightElms === "tags" || this.highlightElms === "author") {
       this.element.nativeElement.style.color = 'blue';
     }
   }
@@ -32,7 +32,7 @@ export class HighlightImportantDataDirective {
       this.element.nativeElement.style.border = "none"
     }
 
-    if (this.highlightElms === "hashtags" || this.highlightElms === "author") {
+    if (this.highlightElms === "tags" || this.highlightElms === "author") {
 
       this.element.nativeElement.style.color = this.initColor;
     }
