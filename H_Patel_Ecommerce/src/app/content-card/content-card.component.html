@@ -8,9 +8,9 @@
 
 
 	<div class="content">
-		<h1 class="contentTitle"><span>Title: </span> {{product?.title}}</h1>
+		<h1 appHighlightImportantData class="contentTitle"><span>Title: </span> {{product?.title}}</h1>
 		<h2 class="contentAuthor"><span>Author: </span> {{product?.author}}</h2>
-		<h3 class="contentType"><span>Type: </span> {{product?.type}}</h3>
+		<h3 appHighlightImportantData class="contentType"><span>Type: </span> {{product?.type}}</h3>
 
 
 		<p *ngIf="product?.body; else elseBlockForBody" class="contentBody">{{product?.body}}</p>
@@ -20,7 +20,7 @@
 		</ng-template>
 
 
-		<span *ngIf="product?.hashtags?.length !== 0 && product?.hashtags;"><span></span> {{product?.hashtags?.join(" ")}}</span>
+		<span appHighlightImportantData *ngIf="product?.hashtags?.length !== 0 && product?.hashtags;"><span></span> {{product?.hashtags?.join(" ")}}</span>
 	</div>
 </div>
 
