@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-content-list',
@@ -13,12 +14,14 @@ export class ContentListComponent implements OnInit {
   };
 
   product: Content[];
-  constructor() {
+  constructor(private productService: ProductService) {
     this.product = [];
 
    }
 
   ngOnInit(): void {
+    this.productService.getContent().subscribe(productArray =>
+      this.product = productArray);
   }
 
   checkForAuthorInList(productList: string): void {

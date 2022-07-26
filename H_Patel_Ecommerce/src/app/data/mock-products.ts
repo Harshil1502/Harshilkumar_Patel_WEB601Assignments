@@ -5,7 +5,6 @@ export const DEFAULTPRODUCTCONTENT: Content = {
   id: -1,
   title: 'NOT FOUND',
   author: "NOT VALID",
-  type: ''
 }
 
 export const PRODUCTS: Content[] = [

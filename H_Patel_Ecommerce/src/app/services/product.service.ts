@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Content } from '@angular/compiler/src/render3/r3_ast';
-import { PRODUCTS } from '../data/mock-products';
+import { DEFAULTPRODUCTCONTENT, PRODUCTS } from '../data/mock-products';
+import { Content } from '../models/content';
 
 @Injectable({
   providedIn: 'root'
