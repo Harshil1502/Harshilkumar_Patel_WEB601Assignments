@@ -1,30 +1,30 @@
-   
+<!--    
 <div>
-		<app-content-card  *ngFor="let item of product; let even = even; let odd = odd" 
+		<app-content-card  *ngFor="let item of product; " 
 		[class.even]="even" [class.odd]="odd" [product]="item"></app-content-card>
-</div>
+</div> -->
 
-<h1>Headphone</h1>
+<h2>Headphone</h2>
 <div>
-	<app-content-card  *ngFor="let item of product | productFilter:'Headphone'; let even = even; let odd = odd;" class="HeadphoneCard" [class.even]="even" [class.odd]="odd" [product]="item"></app-content-card>
-</div>
-
-<hr>
-
-<h1>Speakers</h1>
-<div>
-	<app-content-card  *ngFor="let item of product | productFilter:'Speaker'; let even = even; let odd = odd" class="SpeakerCard" [class.even]="even" [class.odd]="odd" [product]="item"></app-content-card>
+	<app-content-card  *ngFor="let item of product | productFilter:'Headphone';" class="HeadphoneCard" [product]="item"></app-content-card>
 </div>
 
 <hr>
 
-<h1>watch</h1>
+<h2>Speakers</h2>
 <div>
-	<app-content-card  *ngFor="let item of product | productFilter:'Watch'; let even = even; let odd = odd" class="Watchcard" [class.even]="even" [class.odd]="odd" [product]="item"></app-content-card>
+	<app-content-card  *ngFor="let item of product | productFilter:'Speaker'; " class="SpeakerCard"  [product]="item"></app-content-card>
+</div>
+
+<hr>
+
+<h2>watch</h2>
+<div>
+	<app-content-card  *ngFor="let item of product | productFilter:'Watch'; " class="Watchcard"  [product]="item"></app-content-card>
 </div>
 
 
-<h1>No Type:</h1>
+<h2>No Type:</h2>
 <div>
-	<app-content-card  *ngFor="let item of product | productFilter:''; let even = even; let odd = odd" class="NullTypeCard" [class.even]="even" [class.odd]="odd" [product]="item"></app-content-card>
+	<app-content-card  *ngFor="let item of product | productFilter:''; " class="NullTypeCard" [product]="item"></app-content-card>
 </div>
