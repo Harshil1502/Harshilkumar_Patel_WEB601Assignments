@@ -17,6 +17,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     // getContentItem test
+    this.productService.getContentItem(1).subscribe(productItem => {
       console.log("App component - Got the content item: ", productItem);
       this.individualProduct = productItem;
     });
