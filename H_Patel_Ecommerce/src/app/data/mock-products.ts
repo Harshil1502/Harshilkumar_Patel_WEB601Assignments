@@ -1,17 +1,13 @@
 import { Content } from "../models/content";
 
-/**
- * Default invalid content item data
- */
+
 export const DEFAULTPRODUCTCONTENT: Content = {
   id: -1,
   title: 'NOT FOUND',
   author: "NOT VALID",
+  type: ''
 }
 
-/**
- * Our array of chess champions
- */
 export const PRODUCTS: Content[] = [
     {
         id: 0,
@@ -86,6 +82,5 @@ export const PRODUCTS: Content[] = [
         price: 450,
         author: 'Apple',
         hashtags: ['FitBit']
-  
       }
 ];

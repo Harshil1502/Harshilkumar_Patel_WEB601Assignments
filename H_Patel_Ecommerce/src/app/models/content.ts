@@ -4,7 +4,7 @@ export interface Content {
     body?: string;        //optional string
     author: string;
     imageLink?: string;  //optional string
-    type?: string;
+    type: string;
     hashtags?: string[]; //optional array of string
     price?: number
     

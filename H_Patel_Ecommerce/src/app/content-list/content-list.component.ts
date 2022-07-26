@@ -16,8 +16,6 @@ export class ContentListComponent implements OnInit {
   constructor() {
     this.product = [];
 
-
-
    }
 
   ngOnInit(): void {
